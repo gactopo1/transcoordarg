@@ -294,6 +294,9 @@ html{
     outline: none;
     opacity: 0.8;
     transition: opacity 0.2s;
+    position: relative;
+    box-shadow: none;
+    border: none;
 }
 
 .slider:hover {
@@ -305,15 +308,24 @@ html{
     appearance: none;
     width: 10px;
     height: 10px;
-    background: #0311da;
+    background: #f5f5f8;
     cursor: pointer;
     border-radius: 50%;
+    box-shadow: none;
+    border: none;
 }
 
 .slider::-moz-range-thumb {
     width: 10px;
     height: 10px;
-    background: #1a02a1;
+    background: #f5f5f8;
     cursor: pointer;
     border-radius: 50%;
+    box-shadow: none;
+    border: none;
+}
+
+.slider::before,
+.slider::after {
+    content: none;
 }
