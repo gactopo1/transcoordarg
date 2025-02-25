@@ -1,0 +1,319 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    background-color: rgb(185, 221, 241);
+}
+
+.encabezado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: #fff;
+}
+
+.contenedor{
+    display: flex;
+    margin-top: 2px;
+    background-color: white;
+}
+
+.boton-redondo {
+    border-radius: 20px;
+    background-color: rgb(207, 228, 241);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    color: black;
+    border: none;
+    padding: 5px 5px;
+    font-size: 12px;
+    margin-left: 20px;
+}
+  
+.boton-redondo:hover{
+    background-color: grey;
+    color: white;
+}
+
+.linea-divisoria{
+    border-top: 1px solid lightsteelblue;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.texinput{
+    display: flex;
+    margin-bottom: 2px;
+}
+
+.texinputVol{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2px;
+}
+
+.texinput label{
+    font-size: 12px;
+    width: 50px;
+}
+
+.punto{
+    font-size: 12px;
+    width: 80px;
+    padding-left: 2px;
+    margin-left: 10px;
+    border-left: 1px solid #585656;
+    border-top: 1px solid #585656;
+    border-right: 1px solid #bbb8b8;
+    border-bottom: 1px solid #bbb8b8;
+}
+
+.tex80{
+    width: 80px;
+}
+
+.imput{
+    background-color: snow;
+    border-width: 1px;
+    border-color: lightgray;
+    width: 90px;
+    /*font-family:Arial, Helvetica, sans-serif;*/
+    font-size: 12px;
+}
+
+.lienzo{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 10;
+    left: 10;
+}
+
+.ajuste{
+    display: none;
+    margin-top: 10px;
+}
+
+.grilla{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-right: rgb(185, 221, 241) 2px;
+}
+
+.xy{
+    display: flex
+}
+
+.grillaNiveles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    max-width: 400px;
+    margin: auto;
+    }
+
+  /* Encabezado */
+  .header {
+    font-weight: bold;
+    text-align: center;
+    flex: 1 0 30%; /* Tres columnas */
+  }
+
+/* Celdas */
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 30%; /* Tres columnas */
+}
+
+.cellinput {
+      width: 60px;
+}
+
+.lingrilla {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Espacio entre filas */
+}
+
+.lingrilla label {
+    flex: 1; /* Opcional: Controla el ancho del label */
+}
+
+.lingrilla input {
+    width: 50px;
+    /*flex: 2; /* Opcional: Controla el ancho del input */
+}
+
+#divcanvaSuperior{
+    display: flex;
+    flex-grow: 1; /* Ocupa el resto del espacio disponible */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    background-color: white;
+    margin-left: 2px;
+    padding: 10px;
+}
+
+#divcanva {
+    display: flex;
+    position: relative;
+    width: 520px;
+    height: 520px;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+#lienzoVolumen{
+    z-index: 0;
+}
+
+#lienzoAux {
+    z-index: 1;
+}
+
+#lienzoPoligonos {
+    z-index: 2;
+}
+
+#lienzoPuntos {
+    z-index: 3;
+}
+
+#lienzoCurvas {
+    z-index: 4;
+}
+
+#lienzoGrilla {
+    z-index: 5;
+}
+
+#pie{
+    display: flex;
+    flex-direction: column;
+}
+
+#divspinner{
+    display: flex;
+    justify-content: center; 
+}
+
+.spinner {
+    border: 16px solid #2e2b2b;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.lineaBotones{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.switch-vintage{
+    display: flex; 
+    align-items: center; 
+    flex-direction: column;
+}
+
+/* Ocultar el checkbox original */
+.switch-vintage input {
+    display: none;
+}
+.switch-vintage label {
+    font-size: 12px;
+    /*font-family: 'Courier New', Courier, monospace; /* Fuente retro */
+    display: block;
+}
+/* Botón cilíndrico vintage */
+.switch-vintage .boton-vintage {
+    /*display: inline-flex; /* Cambiar a flexbox */
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    margin-top: 10px;
+    margin-bottom: 12px;
+    width: 25px;
+    height: 25px;
+    background-color: #e0e0d1; /* Color claro */
+    border-radius: 50%; /* Botón redondo */
+    border: 3px solid #a0522d; /* Borde marrón vintage */
+    box-shadow: 0 0 0 5px rgba(160,82,45,0.5), /* Alto del cilindro (5 cm de altura) */
+                inset 0 0 5px rgba(0, 0, 0, 0.3); /* Efecto interior */
+    font-size: 10px;
+    font-family: 'Courier New', Courier, monospace; /* Fuente retro */
+    font-weight: bold;
+    color: #a0522d; /* Texto marrón */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Estado presionado (cuando el checkbox está seleccionado) */
+.switch-vintage input:checked + .boton-vintage {
+    background-color: #a0522d; /* Color marrón oscuro */
+    color: #f0f0f0; /* Texto claro */
+    box-shadow: 0 0 0 2px rgba(160,82,45,0.7), /* Reducir a 2 cm de altura */
+                inset 0 0 5px rgba(0, 0, 0, 0.5); /* Mayor profundidad interior */
+}
+
+/* Texto dinámico */
+.switch-vintage input:checked + .boton-vintage::before {
+    content: 'NO';
+}
+
+.switch-vintage .boton-vintage::before {
+    content: 'SI';
+}
+
+/* control slider */
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 120px;
+    height: 10px;
+    background: #555454;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #0311da;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    background: #1a02a1;
+    cursor: pointer;
+    border-radius: 50%;
+}

@@ -1,0 +1,448 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    background-color: rgb(207, 228, 241);
+}
+
+.encabezado{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background: #fff;
+}
+
+.botonnav {
+    display: inline-block;
+    padding: 2px 5px;
+    font-size: 1rem;
+    background-color: rgb(207, 228, 241); /* Color de fondo del botón */
+    color: black; /* Color del texto del botón */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    border: none; /* Quita el borde del botón */
+    border-radius: 20px; /* Ajusta el radio del borde para que sea más redondeado */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.5s; /* Agrega una transición suave al cambio de color de fondo */
+}
+
+.botonnav:hover {
+    background-color: grey;  /* Cambia el color de fondo al pasar el ratón sobre el botón */
+    color: white;
+}
+
+.botonnav.active {
+    background-color: grey; /* Color de fondo del botón activo */
+    color: white; /* Color del texto del botón activo */
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 20px;
+}
+
+.contenedor{
+    display: flex;
+    margin-top: 2px;
+}
+
+.origen{
+    flex: 1;
+    background: white;
+    margin-right: 1px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.destino{
+    flex: 1;
+    background: white;
+    margin-left: 1px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.centrado{
+    display: flex;
+    justify-content: center;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subtitulo{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.select_boton{
+    display:inline-block;
+}
+
+.ancho200{
+    width: 200px;
+    display: inline-block;
+}
+
+.ancho300{
+    width: 300px;
+    display:inline-block;
+}
+
+.boton-redondo {
+    border-radius: 20px;
+    background-color: rgb(207, 228, 241);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    color: black;
+    border: none;
+    padding: 5px 5px;
+    font-size: 12px;
+    margin-left: 20px;
+}
+
+.boton-redondo:hover{
+    background-color: grey;
+    color: white;
+}
+
+.separador{
+    height: 5px;
+}
+
+.labelinput{
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.imput{
+    background-color: snow;
+    border-width: 1px;
+    border-color: lightgray;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.linea-divisoria{
+    border-top: 1px solid lightsteelblue;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.dataform{
+    flex: 1;
+}
+
+.titulodatos{
+    display: flex;
+    justify-content: center;
+}
+
+.barra_botones{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: 40px;
+    background: white;
+    margin-top: 2px;
+}
+
+#coorarg{
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+#listamenu {
+    display: flex;
+    list-style-type: none; /* Quita los puntos de la lista */
+    text-align: center; 
+    gap: 20px;
+}
+
+#boton_formatoD{
+    width: 100px;
+    margin-right: 5px;
+}
+
+#boton_formatoO{
+    width: 100px;
+    margin-right: 5px;
+}
+
+#boton_formatoD:hover{
+    background-color: grey;
+    color: white;
+}
+
+#boton_formatoO:hover{
+    background-color: grey;
+    color: white;
+}
+
+#geocen_Z_O{
+    display: none;
+}
+
+#geocen_Z_D{
+    display: none;
+}
+
+#lab_O_1{
+    margin-top: 10px;
+}
+
+#lab_D_1{
+    margin-top: 10px;
+}
+
+#selcoordO{
+    margin-bottom: 10px;
+}
+
+#selcoordD{
+    margin-bottom: 10px;
+}
+
+#seltrans{
+    display: none;
+}
+
+#ventana{
+    display: none;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    /*transform: translate(-50%, -50%);*/
+    cursor: default;
+    z-index: 1000;
+}
+
+#boton_cal_dir:hover {
+    background-color: grey;
+    color: white;
+}
+
+#boton_cal_inv:hover {
+    background-color: grey;
+    color: white;
+}
+#boton_archivo:hover {
+    background-color: grey;
+    color: white;
+}
+
+#boton_cerrar_ventana:hover{
+    background-color: grey;
+    color: white;
+}
+#div_boton_cerrar{
+    text-align: right;
+}
+
+#archivoexcel{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    margin-top: 2px;
+}
+
+#barra_archivo{
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+#boton_volver_archivo:hover{
+    background-color: grey;
+    color: white;
+}
+
+#boton_volver_archivo{
+    margin-left: 20px;
+}
+
+#boton_cal_archivo:hover{
+    background-color: grey;
+    color: white;
+}
+
+#boton_cal_archivo{
+    margin-left: 20px;
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .contenedor{
+        flex-direction: column;
+    }
+    
+    .encabezado {
+        height: auto; /* Ajusta la altura automáticamente según el contenido */
+        width: auto;
+        align-items: center;
+    }
+
+    .listamenu{
+        gap: 5px;
+    }
+    
+    .botonnav {
+        /*padding: 2px 5px; /* Ajusta el espaciado interno según sea necesario */
+        font-size: 0.8rem;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+    #coorarg{
+        font-size: 18px;
+    }
+}
+
+/* Estilo del contenedor del interruptor */
+.switch {
+    margin-left: 20px;  
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 20px;
+}
+
+/* Ocultar el checkbox original */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Estilo de la parte deslizante */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(207, 228, 241);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    transition: 0.4s;
+    border-radius: 15px;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Opcional: centrar horizontalmente */
+}
+
+/* Estilo de la parte deslizante cuando el checkbox está activo (ON) */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Cambiar el color de fondo cuando el interruptor esté ON */
+input:checked + .slider {
+    background-color: grey;
+}
+
+/* Mover el círculo a la derecha cuando esté ON */
+input:checked + .slider:before {
+    transform: translateX(60px);
+}
+
+/* Estilo para las palabras dentro del slider */
+.slider-text {
+    position: absolute;
+    font-size: 12px;
+    color: black;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.slider-text.off {
+    left: 20px;
+    color: black;
+}
+
+.slider-text.on {
+    right: 20px;
+    color: white;
+}
+
+/* Mostrar la palabra "elip" en el estado OFF */
+input:not(:checked) + .slider .off {
+    opacity: 1;
+}
+
+/* Mostrar la palabra "orto" en el estado ON */
+input:checked + .slider .on {
+    opacity: 1;
+}
+
+.button-group {
+    display: none;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.btn {
+    border-radius: 20px;
+    background-color: rgb(207, 228, 241);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    color: black;
+    border: none;
+    padding: 2px 2px;
+    font-size: 12px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+.btn.selected {
+    background-color: grey;
+    color: white;
+}
+
+.spinner {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
