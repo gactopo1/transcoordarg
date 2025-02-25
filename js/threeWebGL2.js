@@ -15,6 +15,7 @@ export function inicializarEscena(canvas,vertices) {
     let yMax = parseFloat(document.getElementById('ymax').value);
     let zMin = parseFloat(document.getElementById('zmin').value);
     let zMax = parseFloat(document.getElementById('zmax').value);
+    let zRef = parseFloat(document.getElementById('referenciaZ').value);
     let factorZ = parseFloat(document.getElementById('factorZ').value);
     const color = document.getElementById('colorVolumen').value;
     const colorPlano = document.getElementById('colorPlano').value;
