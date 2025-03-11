@@ -1,7 +1,5 @@
--- Eliminar comandos específicos de MariaDB que no son compatibles con SQLite
-
--- Crear la tabla en SQLite
 DROP TABLE IF EXISTS datumhor;
+
 CREATE TABLE datumhor (
   codigo INTEGER PRIMARY KEY,
   nombre TEXT NOT NULL,
@@ -10,7 +8,6 @@ CREATE TABLE datumhor (
   invflattening REAL NOT NULL
 );
 
--- Insertar datos en la tabla datumhor
 INSERT INTO datumhor (codigo, nombre, elipsoide, semimayor, invflattening) VALUES
 (1062,'POSGAR 07','GSR80',6378137,298.2572235631),
 (1257,'Tapi Aike','Internacional 1924',6378388,297),
@@ -269,22 +266,6 @@ CREATE TABLE trandatum (
   param1 TEXT NOT NULL,
   param2 TEXT NOT NULL
 );
-
-  `codigo` int(11) NOT NULL,
-  `nombre` text NOT NULL,
-  `Descripcion` text NOT NULL,
-  `datumorigen` int(11) NOT NULL,
-  `datumdestino` int(11) NOT NULL,
-  `transformacion` text NOT NULL,
-  `dx` double NOT NULL,
-  `dy` double NOT NULL,
-  `dz` double NOT NULL,
-  `rx` double NOT NULL,
-  `ry` double NOT NULL,
-  `rz` double NOT NULL,
-  `k` double NOT NULL,
-  `param1` text NOT NULL,
-  `param2` text NOT NULL,
 
 INSERT INTO trandatum (codigo,nombre,descripcion,datumorigen,datumdestino,transformacion,dx,dy,dz,rx,ry,rz,k,param1,param2) VALUES
 (1527,'Campo Inchauspe 1969 - POSGAR 94 (Neuquen - EPSG)','Nuequen - Area Auca Mahuida - Derivado de las Estaciones Cerro Colorado y Chihuido Sur, vinculadas a 4 estaciones IGS (feb-1995)',6221,6694,'Traslacion Geocentrica',-154.5,150.7,100.4,0,0,0,1,'',''),
