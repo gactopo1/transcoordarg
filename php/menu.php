@@ -6,9 +6,8 @@
             <ul id="listamenu">
                 <li><a href="index.php?vista=home" class = "botonnav">Inicio</a></li>
                 <li><a href="index.php?vista=usuario" class = "botonnav">Datos Usuario</a></li>
-                <li><a href="index.php?vista=geodesia" class = "botonnav">Geodesia</a></li>
                 <li><a href="index.php?vista=mdt" class = "botonnav">MDT</a></li>
-                <li><a href="http://transcoord.gcuello.serv00.net/" class = "botonnav">Global</a></li>
+                <li><a href="https://transcoord.gcuello.serv00.net/" class = "botonnav">Global</a></li>
             </ul>
         </nav>
     </section>

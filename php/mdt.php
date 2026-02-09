@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>Modelo digital del terreno</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="./css/mdt.css">
         <script>

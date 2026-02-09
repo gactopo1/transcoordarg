@@ -1124,23 +1124,9 @@ function GraGraMinSeg(tipo,valor){
         var sign = valor < 0 ? '-' : '';
         valor=Math.abs(valor);
         var degrees = Math.trunc(valor);
-        var dif = valor-degrees;
-        if (1-dif < 0.000001){
-            degrees+=1;
-            minutes=0;
-            seconds=0;
-        }else{
-            var minutes_float = dif * 60;
-            var minutes = Math.trunc(minutes_float);
-            var difm = minutes_float-minutes;
-            if(1-difm < 0.0000001){
-                minutes+=1;
-                seconds=0;
-            }else{
-                var seconds = difm * 60;
-            }
-        }
-        //degrees=degrees*sign;
+        var minutes_float = (valor - degrees) * 60;
+        var minutes = Math.trunc(minutes_float);
+        var seconds = (minutes_float - minutes) * 60;
         var ggmmss = sign + degrees.toString().padStart(2, '0') + " " + minutes.toString().padStart(2, '0') + " " + seconds.toFixed(6);
         return ggmmss;
     }else{

@@ -4,7 +4,7 @@ require_once 'proyecciones.php';
 require_once 'transformaciones.php';
 
 function conexion() {
-    $base = new PDO('mysql:host=localhost;dbname=transcoordarg', 'root', '');
+    $base = new PDO('mysql:host=mysql8.serv00.com;dbname=m8039_transcoordarg', 'm8039_gcuello', 'Burundi5101');
     return $base;
 }
 

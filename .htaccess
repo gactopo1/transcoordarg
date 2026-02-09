@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Evitar que se aplique a archivos reales (imágenes, css, js)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirigir la raíz a la vista home internamente
+RewriteRule ^$ index.php?vista=home [L,QSA]
+
+# Reglas de reescritura
+RewriteRule ^home$ index.php?vista=home [L,QSA]
+RewriteRule ^usuario$ index.php?vista=usuario [L,QSA]
+RewriteRule ^mdt$ index.php?vista=mdt [L,QSA]
